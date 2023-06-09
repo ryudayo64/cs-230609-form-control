@@ -1,0 +1,65 @@
+###  visual stadio のFormアプリ作成
+
+```cs
+using System.Diagnostics;
+
+namespace cs_form_mtn_001_vs2022
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void テストToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            {
+                //Form2 dialog = new Form2();
+                //DialogResult ret = dialog.ShowDialog(this);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {//画面表示前の処理
+            
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {//画面表示後の処理
+            //プログラムの初回のみ
+            this.社員コード.Focus();
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {//画面閉じた後の処理
+
+        }
+
+        private void 確認_Click(object sender, EventArgs e)
+        {
+
+            //Debug.WriteLine("確認");//デバッグに出力される
+            ////MessageBox.Show("確認");//window上に出力される
+
+            //クリックされたら次のイベントを開始する。
+            //自分自身のファイルを指定
+            this.ヘッド部.Enabled = false;
+            this.ボディ部.Enabled = true;
+
+            this.氏名.Focus();
+        }
+
+        private void キャンセル_Click(object sender, EventArgs e)
+        {
+            this.ヘッド部.Enabled = true;
+            this.ボディ部.Enabled = false;
+
+            //Focus()、テキストボックスがすぐに入力できる状態にする
+            this.社員コード.Focus();
+            this.社員コード.SelectAll();
+        }
+    }
+}
+```

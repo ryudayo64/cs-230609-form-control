@@ -1,6 +1,4 @@
-###  visual stadio のFormアプリ作成
-
-```cs
+// visual stadio のFormアプリ作成
 using System.Diagnostics;
 
 namespace cs_form_mtn_001_vs2022
@@ -62,4 +60,4 @@ namespace cs_form_mtn_001_vs2022
         }
     }
 }
-```
+
